@@ -8,8 +8,34 @@
                 border-radius: 30px;
                 color: #EEEEEE;
                 margin: 2rem;
+                box-shadow: 2px 2px 10px #D84040;
 
                 .list {}
+
+                .name-and-dev-container {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .name-socials-container {
+                        width: 70%;
+
+                        .hi-container {}
+
+                        .name-container {}
+
+                        .dev-container {}
+                    }
+                }
+
+                .socials-container {
+                    width: 30%;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .github {}
+
+                    .linkedin {}
+                }
             }
         }
     }
@@ -25,4 +51,21 @@
 
 .text-align-center {
     text-align: center;
+}
+
+li>h3 {
+    margin: 0.5rem;
+}
+
+.margin-0-rem {
+    margin: 0rem;
+}
+
+.margin-1-rem {
+    margin: 1rem;
+}
+
+a {
+    // text-decoration: none;
+    color: #D84040;
 }
