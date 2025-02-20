@@ -1,0 +1,28 @@
+.main-container {
+    .first-container {
+        .first-sub-container {
+            .styling-container {
+                padding: 1rem;
+                background: #8E1616;
+                /* max-width: 50%; */
+                border-radius: 30px;
+                color: #EEEEEE;
+                margin: 2rem;
+
+                .list {}
+            }
+        }
+    }
+}
+
+.display-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-around;
+}
+
+.text-align-center {
+    text-align: center;
+}

@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background: #1D1616;
+    background-color: #1D1616;
+}
+
 p,
 h1,
-h2 {
+h2,
+h3 {
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     //   font-weight: <weight>;
