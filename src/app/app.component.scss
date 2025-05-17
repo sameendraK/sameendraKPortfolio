@@ -3,12 +3,16 @@
         .first-sub-container {
             .styling-container {
                 padding: 1rem;
-                background: #8E1616;
+                animation: gradientBackground 5s ease infinite;
+                background: linear-gradient(-45deg, #588e16, #40d8b2, #2284b2, #69076d);
+                background-size: 400% 400%;
                 /* max-width: 50%; */
                 border-radius: 30px;
                 color: #EEEEEE;
                 margin: 2rem;
-                box-shadow: 2px 2px 10px #D84040;
+                // box-shadow: 2px 2px 10px #D84040;
+                background-color: rgba(0, 0, 0, 0.3); // subtle see-through
+                backdrop-filter: blur(10px);
 
                 .list {}
 
@@ -35,6 +39,18 @@
                     .github {}
 
                     .linkedin {}
+                }
+            }
+
+            .repos-links {
+                .repo-links {
+                    a {
+                        color: white;
+                        font-family: "Montserrat", serif;
+                        font-optical-sizing: auto;
+                        //   font-weight: <weight>;
+                        font-style: normal;
+                    }
                 }
             }
         }
@@ -67,7 +83,7 @@ li>h3 {
 
 a {
     // text-decoration: none;
-    color: #D84040;
+    color: rgb(94, 132, 94);
 }
 
 .flex-wrap-wrap {
@@ -87,4 +103,18 @@ a {
     z-index: 10;
     width: 250px;
     color: black
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }

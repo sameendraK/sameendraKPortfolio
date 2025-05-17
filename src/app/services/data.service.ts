@@ -40,8 +40,12 @@ export class DataService {
       name: 'POCs',
       details: 'Delivered proof-of-concept applications for major clients such as SBI, MetLife, and Amerilife, showcasing technical capabilities and potential solutions for diverse business needs.'
     }
-    
+
     // Add more projects as needed
   ];
+  repoLinks: string[] = [
+    'https://sameendrak.github.io/adUI/',
+    'https://sameendrak.github.io/uniqueSchools/'
+  ]
 
 }

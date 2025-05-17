@@ -69,11 +69,17 @@
               </div>
             </div>
           </div>
-
         </div>
-        <ng-container #iemoProjectExperience>
-          <p>This section is for IEMO experience</p>
-        </ng-container>
+        <div class="repos-links text-align-center">
+          <h1>
+            Repos Links
+          </h1>
+          <div class = "repo-links" *ngFor="let repoLink of dataService.repoLinks">
+            <a [href]=repoLink >
+              {{repoLink}}
+            </a>
+          </div>
+        </div>
 
       </div>
     </div>
