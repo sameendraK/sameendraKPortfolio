@@ -72,8 +72,8 @@
           <h1>
             Repos Links
           </h1>
-          <div class="repo-links" *ngFor="let repoLink of dataService.repoLinks">
-            <a [href]=repoLink class="overflow-auto">
+          <div class="repo-links overflow-auto" *ngFor="let repoLink of dataService.repoLinks">
+            <a [href]=repoLink>
               {{repoLink}}
             </a>
           </div>
