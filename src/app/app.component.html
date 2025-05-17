@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="main-container" (appClickOutside)="onOutsideClick()">
   <div class="first-container">
     <div class="first-sub-container">
       <div class="styling-container">
@@ -6,110 +6,76 @@
           <div class="name-socials-container">
             <div class="hi-container">
               <p class="margin-0-rem">
-                Hi there, I am
+                {{dataService.greetingText}}
               </p>
             </div>
             <div class="name-container">
-              <h1 class="margin-1-rem">Sameendra Krovvidi</h1>
+              <h1 class="margin-1-rem">{{dataService.name}}</h1>
             </div>
             <div class="dev-container">
-              <h1 class="margin-1-rem">Frontend Developer</h1>
+              <h1 class="margin-1-rem">{{dataService.role}}</h1>
             </div>
           </div>
           <div class="socials-container">
-            <div class="github">
+            <div class="social" *ngFor="let social of dataService.socials">
               <button>
                 <a href="https://github.com/sameendraK" target="_blank">
-                  <p>Github</p>
+                  <p>{{social}}</p>
                 </a>
               </button>
             </div>
-            <div class="linkedin">
-              <button>
-                <a href="https://www.linkedin.com/in/krovvidi-sameendra/" target="_blank">
-                  <p>LinkedIN</p>
-                </a>
-              </button>
-            </div>
-          </div>
-          <div class="email">
-            <!-- <button> -->
-            <p>{{email}}</p>
-            <!-- </button> -->
           </div>
 
         </div>
 
         <p class="margin-0-rem">with</p>
-        <h1 class="margin-1-rem">3+ years</h1>
-        <p class="margin-0-rem">of experience speializing in</p>
-        <div class="list display-flex justify-content-between">
+        <h1 class="margin-1-rem">{{dataService.yoe}}</h1>
+        <p class="margin-0-rem">{{dataService.specializingIn}}</p>
+        <div class="list flex-wrap-wrap display-flex justify-content-between">
           <div class="items-list">
-            <ul>
-              <li>
-                <h3>Angular</h3>
-              <li>
-                <h3>React</h3>
-              </li>
-              <li>
-                <h3>JS</h3>
-              </li>
-              <li>
-                <h3>TS</h3>
-              </li>
-              <li>
-                <h3>HTML</h3>
-              </li>
-              <li>
-                <h3>CSS</h3>
-              </li>
-              <li>
-                <h3>Unqork</h3>
-              </li>
-            </ul>
+            <div *ngFor="let item of dataService.skills">
+              <!-- <li> -->
+              <h3>{{item}}</h3>
+              <!-- </li> -->
+            </div>
           </div>
           <div class="experience-container">
             <div class="experience-heading-container">
               <h1>
-                Experiences
+                {{dataService.experiencesString}}
               </h1>
             </div>
-            <div class="meditab-exp-container text-align-center">
-              <h2>Meditab</h2>
-            </div>
-            <div class="aiden-ai-exp-container text-align-center">
-              <h2>Aiden AI</h2>
+            <div class="meditab-exp-container text-align-center" *ngFor="let exp of dataService.experiences">
+              <h2>{{exp}}</h2>
             </div>
           </div>
-          <!-- <div class="projects-container">
+          <div class="projects-container text-align-center">
             <div class="projects-heading-container">
-              <h1>
-                Projeccts
-              </h1>
+              <h1>{{ dataService.projectsString }}</h1>
             </div>
-            <div class="meditab-exp-container text-align-center">
-              <h2 class="margin-1-rem">IEMO</h2>
+
+            <div class="meditab-exp-container text-align-center"
+              *ngFor="let project of dataService.projects; let i = index" style="position: relative;">
+              <h2 class="margin-1-rem">
+                {{ project.name }}
+                <!-- Info Icon -->
+                <span class="info-icon" (click)="toggleTooltip(i)" style="cursor: pointer; margin-left: 0.5rem;"
+                  title="View Details">ℹ️</span>
+              </h2>
+
+              <!-- Tooltip -->
+              <div *ngIf="selectedIndex === i" class="tooltip" appTooltip>
+                {{ project.details }}
+              </div>
             </div>
-            <div class="meditab-exp-container text-align-center">
-              <h2 class="margin-1-rem">Care Catalyst</h2>
-            </div>
-            <div class="meditab-exp-container text-align-center">
-              <h2 class="margin-1-rem">Edward Jones</h2>
-            </div>
-            <div class="meditab-exp-container text-align-center">
-              <h2 class="margin-1-rem">Internal Projects</h2>
-            </div>
-          </div> -->
+          </div>
+
         </div>
-      </div>
-    </div>
-    <div class="second-sub-container">
-      <div class="photo">
-        <!-- <img src=".././assets/srt.jpg"> -->
+        <ng-container #iemoProjectExperience>
+          <p>This section is for IEMO experience</p>
+        </ng-container>
+
       </div>
     </div>
   </div>
-  <p>
-
-  </p>
 </div>
