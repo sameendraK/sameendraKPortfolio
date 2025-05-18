@@ -45,7 +45,9 @@ export class DataService {
   ];
   repoLinks: string[] = [
     'https://sameendrak.github.io/adUI/',
-    'https://sameendrak.github.io/uniqueSchools/'
+    'https://sameendrak.github.io/uniqueSchools/',
+    'https://sameendrak.github.io/stocksDashboard/',
+    'https://sameendrak.github.io/TransportSimple/'
   ]
 
 }
